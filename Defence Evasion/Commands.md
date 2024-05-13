@@ -43,3 +43,11 @@ Disable Windows Firewall using powershell (Requires Local Admin rights):
 ```
 Netsh Advfirewall set allprofiles state off
 ```
+
+## AppLocker
+
+Check AppLocker policies using powershell.
+
+```
+reg query HKLM\Software\Policies\Microsoft\Windows\SRPV2\Script\06dce67b-934c-454fa263-2515c8796a5d
+```
