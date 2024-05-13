@@ -104,3 +104,22 @@ Execute WMI quries.
 ```
 gwmi -class win32_operatingsystem -ComputerName test-dc
 ```
+
+## Delegation
+
+### UnConstrained Delegation
+
+Identify Computer Objects where Unconstrained Delegation is allowed.
+
+```
+Get-NetComputer -Unconstrained
+```
+
+### Constrained Delegation
+
+Identify the user and computer account having constrained delegation enabled.
+
+```
+Get-NetUser -TrustedToAuth | select cn, samaccountname, msds-allowedtodelegateto
+Get-NetComputer -TrustedToAuth
+```
