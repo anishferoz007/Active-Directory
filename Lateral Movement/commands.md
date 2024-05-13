@@ -96,3 +96,11 @@ Dump SAM of local machine via mimikatz.exe
 ```
 SafetyKatz.exe "sekurlsa::ekeys" "exit"
 ```
+
+## WMI
+
+Execute WMI quries.
+
+```
+gwmi -class win32_operatingsystem -ComputerName test-dc
+```
